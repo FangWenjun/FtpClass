@@ -13,9 +13,10 @@ namespace Ftp_Client
 	{
 		static void Main(string[] args)
 		{
-			FTPConnection ftpconn = new FTPConnection();
-			ftpconn.FTPIsConnected("127.0.0.1","Administrator","218818");
-			ftpconn.FTPIsdownload("127.0.0.1", "Administrator", "218818","", @"D:\光纤传感监测系统\FtpClient",".jpg");
+			FTPConnection ftpconn = new FTPConnection("127.0.0.1","Administrator","218818");
+			ftpconn.FTPIsConnected();
+			ftpconn.FTPIsdownload("", @"D:\光纤传感监测系统\FtpClient",".jpg");
+			ftpconn.FTPUpload("",@"D:\光纤传感监测系统\Windows 窗体中的事件顺序.pdf");
 
 
 		}
